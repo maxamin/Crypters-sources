@@ -1,0 +1,33 @@
+How do I find out more information on the CryptoAPI?
+
+Search through MSDN (http://msdn.microsoft.com).
+
+
+What are the differences between 40bit and 128bit keys?
+
+The key length (and algorithm) determines how secure the encryption is against cracking, in this case more is better.
+
+
+What key lengths can be used with the CryptoAPI?
+
+The key length that can be used is entirely dependant on the Cryptographic Provider used with the CryptoAPI.  The Microsoft Base Crytographic Provider is restricted to a 40bit key length.  Prior to the year 2000, the best you could get outside of the USA or Canada with the CryptoAPI was restricted to this 40bit key length.  However, since the launch of Windows 2000 you can now download the high security patch for either Windows 2000, or if you have an earlier version of Windows, the high security patch for Internet Explorer 5 or 4 (available from http://www.microsoft.com).  You will then be able to use some of the other providers, for instance, the Microsoft Enhanced Cryptographic Provider.
+
+
+Your example code demonstrates the encryption of strings, how can I encrypt an entire file?
+
+You have two choices if you want to encrypt an entire file with the CryptoAPI.  You can read the entire file into a string, for instance using the ReadAll method on the TextStream object when using the FileSystemObject.  Or, you can encrypt the file a chunk at a time, the 'Final' parameter of the CryptoAPI CryptEncrypt function specifies whether the data you are passing it for encryption is the final chunk or not.  See MSDN for further information.
+
+
+Could I not write my own encryption routine with Visual Basic?
+
+This is not as easy as it sounds.  Visual Basic is not designed for this type of application.  For instance, it does not have right shift or left shift functions built into the language.  If you want to write your own encryption routine you would be better off using C++ or Java as your programming language.
+
+
+What other libraries are available for encryption besides the CryptoAPI?
+
+PGP (Pretty Good Privacy) now has a COM wrapper.  PGP is freeware for non-commercial use, otherwise you need to purchase a copy.  The only problem with PGP is that you cannot guarantee that all Windows PCs will have a copy installed.  The PGP web site can be found at http://www.pgpi.org.
+
+
+What resources are available on the web regarding encryption?
+
+The best source for finding information would be to subscribe to the sci.crypt newsgroup. In addition, an excellent on-line reference book can be found here; http://www.cacr.math.uwaterloo.ca/hac/

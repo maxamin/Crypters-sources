@@ -1,0 +1,11 @@
+C:\Users\Mr.Mobark\Desktop\njw0rm.exe
+C:\Users\Mr.Mobark\Desktop\njw0rm.pdb
+C:\Users\Mr.Mobark\Desktop\njw0rm v3.5\njw0rm\obj\Debug\njw0rm.exe
+C:\Users\Mr.Mobark\Desktop\njw0rm v3.5\njw0rm\obj\Debug\njw0rm.pdb
+C:\Users\Mr.Mobark\Desktop\njw0rm v3.5\njw0rm\obj\Debug\njw0rm.About.resources
+C:\Users\Mr.Mobark\Desktop\njw0rm v3.5\njw0rm\obj\Debug\njw0rm.Form1.resources
+C:\Users\Mr.Mobark\Desktop\njw0rm v3.5\njw0rm\obj\Debug\njw0rm.Form2.resources
+C:\Users\Mr.Mobark\Desktop\njw0rm v3.5\njw0rm\obj\Debug\njw0rm.FURL.resources
+C:\Users\Mr.Mobark\Desktop\njw0rm v3.5\njw0rm\obj\Debug\njw0rm.Resources.resources
+C:\Users\Mr.Mobark\Desktop\njw0rm v3.5\njw0rm\obj\Debug\njw0rm.pwd.resources
+C:\Users\Mr.Mobark\Desktop\njw0rm v3.5\njw0rm\obj\Debug\njw0rm.vbproj.GenerateResource.Cache

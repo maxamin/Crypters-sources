@@ -1,0 +1,61 @@
+CryptAPI Wrapper ver 1.2 (CryptKci.dll)
+Written by kenneth Ives    kenaso@home.com
+
+A wrapper for CryptoAPI functionality within advapi32.dll
+
+=============================================================================
+
+09-SEP-2001  1.2  Fixed several bugs relating to using the enhanced
+                  provider and block ciphers.  Added EnhancedProvider
+                  property.  Updated GetPassword() routine.  Modified
+                  and documented several modules. 
+
+28-AUG-2001  1.1  Updated Documentation.  Removed obsolete variables.
+
+10-JUL-2001  1.0  Wrote original module
+                  
+=============================================================================
+                     CryptKci.dll
+                     
+Copy the \DLL\CryptKci.dll to the system directory where all your
+other DLL's are stored.
+
+	Windows 9x, ME         \Windows\System
+	Windows NT4, 2000      \Winnt\System32
+
+Now register the DLL so it will be recognized by the system.
+
+Select the START button, RUN 
+
+    for Windows 9x, ME  type:  
+          regsvr32 c:\windows\system\CryptKci.dll
+          
+    for NT4, 2000  Type:      
+          regsvr32 c:\winnt\system32\CryptKci.dll
+
+In the VB IDE, to use this DLL, you must first reference it via
+Projects, References on the toolbar menu.  Scroll down the list
+and place a checkmark next to CryptKci                 
+
+=============================================================================
+
+Written by Kenneth Ives                    kenaso@home.com
+
+All of my routines have been compiled with VB6 Service Pack 5.
+There are several locations on the web to obtain these
+runtime modules.
+
+This software is FREEWARE.  You may use it as you see fit for
+your own projects but you may not re-sell the original or the
+source code.
+
+If there is anything in here that you want to use and I wrote
+it, please give me credit.  This is a way of saying "Thank you"
+to another programmer.
+
+No warranty expressed or implied is given as to the use of this
+program.  Use at your own risk.
+
+If you have any suggestions or questions, I would be happy to
+hear from you.
+=============================================================================

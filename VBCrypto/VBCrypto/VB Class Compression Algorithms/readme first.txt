@@ -1,0 +1,1 @@
+This directory contains a Huffman compression algorithm and a Base64 encoder/decoder algorithm. These implementations are supported by David Midkiff (mznull@earthlink.net). Enjoy!

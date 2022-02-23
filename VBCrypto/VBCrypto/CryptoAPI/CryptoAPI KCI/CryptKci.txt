@@ -1,0 +1,154 @@
+CryptAPI Wrapper ver 1.2 (CryptKci.dll)
+Written by kenneth Ives    kenaso@home.com
+
+A wrapper for CryptoAPI functionality within advapi32.dll
+
+=============================================================================
+                        Properties
+=============================================================================
+ROUTINE            DESCRIPTION      
+-----------------------------------------------------------------------------
+EnhancedProvider   [Output]  Returns a boolean flag designating if the 
+                             enhanced provider is being used.
+                   [Input]   Boolean flag to designate if the enhanced 
+                             provider is to be used.
+                   
+InputData          Input only.  Data to be Encrypted/Decrypted.
+
+OutputData         Read only.  Return encrypted/decrypted data in byte array 
+                   format.
+
+Password           [Output]  Returns password in byte array format.
+                   [Input]   Receives user supplied password in byte array format.
+                   
+UseDefaultPWD      Input only.  Boolean flag used to override Password 
+                   property.  TRUE=Use default password.  FALSE=Create random 
+                   data password (used for initialization vectors).                   
+
+
+=============================================================================
+                        Methods
+=============================================================================
+ROUTINE            DESCRIPTION      
+-----------------------------------------------------------------------------
+ByteArrayToString  Convert a byte array to string format.
+       <PARAMETERS>
+                   arByte() - Incoming data in byte format
+                   
+ConvertByteToHex   Convert byte array data to two character hex format and 
+                   return in a single string.                   
+       <PARAMETERS>
+                   abytData() - An array of data to be converted
+                   
+ConvertStringFromHex  Convert hex data to ASCII decimal string format.                                      
+       <PARAMETERS>
+                   strHex - Data string to be converted                    
+                   
+ConvertStringToHex  Take one character at a time and convert first to an
+                   integer then to hex.  Prefix with two zeros in case the
+                   result is 0x00 to 0x0F (leading zeros tend to disappear).
+                   Then capture the last two characters.  This will give a
+                   good two character hex display.                   
+       <PARAMETERS>
+                   strInput - Data to be converted
+                   blnRetUppercase - (Optional) [Default] - TRUE=Convert data
+                        to uppercase before leaving this routine.
+                        FALSE=Do not convert the data to uppercase.
+
+CreateHash         Generate a one-way hash string from a string of data. There
+                   are 4 algorithms available:
+                           1=MD5  2=MD4  3=MD2  4=SHA-1
+
+                   Hashes are extremely usefull for determining whether a
+                   transmission or file has been altered.  The MDn returns a
+                   16 character hash and the SHA returns a 20 character hash.
+                   No two hashes are alike unless the string matches perfectly,
+                   whether binary data or a text string.  I use hashes to
+                   create crypto keys and to verify integrity of packets when
+                   using winsock (UDP especially). Be aware that if you choose
+                   to not convert the return data to hex, then hashes may not
+                   store to text correctly because of the possible existence of
+                   non printable characters in the stream.                        
+       <PARAMETERS>
+                   strInText - string of data to be hashed.
+                   intHashChoice - (Optional) Numeric identifier for the type
+                        of hash algorithm.  [Default] value = 1 (MD5)
+                   blnConvertToHex - (Optional) [Default] TRUE=Convert return
+                        data to Hex format.
+                        FALSE=Do not convert the return data
+                   blnAppendPassword - (Optional) [Default] FALSE=Do not append
+                        the password to the data to be hashed.
+                        TRUE=Append the default password to data to be hashed.
+                   blnCaseSensitive - (Optional) Only used if blnConvertToHex=TRUE
+                        [Default] FALSE=Convert return data to uppercase.
+                        TRUE=Return data as it was created.
+
+CreateRandom       Get truly cryptographic strength random data.  Tested with
+                   DieHard and ENT tests for randomness.                   
+       <PARAMETERS>
+                   lngDataLength - (Optional) Length of data to be returned
+                        [Default] data length is 40 bytes
+                   blnRetExactLength - (Optional) [Default] TRUE=Return just
+                        the length requested.
+                        FALSE=Return all generated data regardless of length.
+                   blnConvertToHex - (Optional) [Default] FALSE=Do not convert
+                        the return data to hex format.
+                        TRUE=Convert return data to hex format.                   
+                        
+CreateSaltValue    Generate random data to be used a salt value.  This will
+                   return values 0-9, A-Z, and a-z or truely random data.
+       <PARAMETERS>
+                   lngReturnLength - Length of data to be returned
+                   blnUseLettersNumbersOnly - (Optional) [Default] TRUE=Use
+                        letters and numbers only.
+                        FALSE=Use truely random data
+
+Decrypt            Call the decyption routine.  
+       <PARAMETERS>
+                   intHashType - (Optional) [Default] 1=Use MD5 hash algorithm
+                        Selection:   1=MD5  2=MD4  3=MD2  4=SHA-1
+                   intCipherType - (Optional) [Default] 1=Use RC4 algorithm
+                        Selection:  (Default Provider)   1=RC4  2=RC2  3=DES
+                                    (Enhanced Provider)  4=3DES 5=3DES_112
+                   
+Encrypt            Call the encyption routine.  
+       <PARAMETERS>
+                   intHashType - (Optional) [Default] 1=Use MD5 hash algorithm
+                        Selection:   1=MD5  2=MD4  3=MD2  4=SHA-1
+                   intCipherType - (Optional) [Default] 1=Use RC4 algorithm
+                        Selection:  (Default Provider)   1=RC4  2=RC2  3=DES
+                                    (Enhanced Provider)  4=3DES 5=3DES_112
+                   
+Rnd2               Create a random value between two values.  Used for desired
+                   range values only.                   
+       <PARAMETERS>
+                   sngLow  - Low end value
+                   sngHign - High end value
+
+StringToByteArray  Converts a string of data into a byte array [Range 0, 255].
+       <PARAMETERS>
+                   strInput - data string to be converted into a byte array
+                   
+=============================================================================
+
+Written by Kenneth Ives                    kenaso@home.com
+
+All of my routines have been compiled with VB6 Service Pack 5.
+There are several locations on the web to obtain these
+runtime modules.
+
+This software is FREEWARE.  You may use it as you see fit for
+your own projects but you may not re-sell the original or the
+source code.
+
+If there is anything in here that you want to use and I wrote
+it, please give me credit.  This is a way of saying "Thank you"
+to another programmer.
+
+No warranty expressed or implied is given as to the use of this
+program.  Use at your own risk.
+
+If you have any suggestions or questions, I would be happy to
+hear from you.
+=============================================================================
+

@@ -1,0 +1,1 @@
+The following CryptoAPI routines were written by other authors than myself and are provided without modifcation in this library for your benefit. They are excellent examples of accessing the CryptoAPI functions built into Windows to gain access to the RC2, RC4, DES, SHA-1, MD2, MD4 and MD5 algorithms. Enjoy!

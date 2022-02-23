@@ -1,0 +1,1 @@
+In this directory you will find a collection of classic cipher routines that will bring you back into great history. None of these are serious algorithms and should only be used for academic purposes. Enjoy!

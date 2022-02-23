@@ -1,0 +1,3 @@
+VBGROUP 5.0
+Project=CryptKci_Dll\CryptKci.vbp
+StartupProject=Crypto_API.vbp

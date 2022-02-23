@@ -1,0 +1,3 @@
+The algorithms in this directory are all open source Visual Basic 6.0 class implementations. All functions/variable naming are standardized to provide easy access to all encryption routines. In the previous version of this library these implementations contained bugs in the key initialization routines. These bugs have now been fixed. Some of the implementations contains salt routines to add to the security of the algorithm.
+
+All implementations in this directory are supported by David Midkiff (mznull@earthlink.net). Enjoy!

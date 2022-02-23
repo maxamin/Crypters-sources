@@ -1,0 +1,7 @@
+Large Archive of Cryptographic Algorithms for VB (v2.0)
+By: David Midkiff (mznull@earthlink.net)
+
+This is a very well compiled archive of cryptographic routines for use in the Visual Basic 6+ environments. It includes 18 popular encryption algorithms (Blowfish, IDEA, Triple DES (3DES), DES, DESE, Gost, Skipjack, TEA, Cast5, Serpent-128, Serpent-192, Serpent-256, Rijndael-128, Rijndael-192, Rijndael-256, RC2, RC4, and Twofish), six popular hash algorithms (SHA-1, SHA-256, MD2, MD4, MD5, and RipeMD), and two popular compression/encoding algorithms (Huffman and Base64).
+
+Updates in 2.0:
+New features in this library include Base 64 encoding instead of Hexadecimal encoding (which is far more efficient), fixed key initialization functions (that many users complained about), the updated EBCrypt library, a couple CryptoAPI demonstrations from other authors, the inclusion of several classical ciphers, and an HTML page of crypto links.
